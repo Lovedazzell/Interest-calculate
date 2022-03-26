@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+<div class="container d-flex align-items-center " style="height: 100vh;">
+    <h1 class="my-5 text-info font">Calculate your interest</h1>   
+    <div class="col-5 mx-auto "><form action=""    method="POST">
+        
+        <div class="circle"></div>
+        <div class="box1"></div>
+        <div class="box2"></div>
+        {% csrf_token %}
+       {% for field in form  %}
+       <div class="row my-3 ">
+           <div class="col-4">{{field.label_tag}}  </div>
+           <div class="col-8">
+            {{field}}
+           </div>
+       </div>
+       {% endfor %}
+   <div class="col-5 ">
+    <input class="btn  btn-info" type="submit" value="Submit"> </div> 
+</div></div>
+    {% endblock content %}
