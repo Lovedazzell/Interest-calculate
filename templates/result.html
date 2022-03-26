@@ -1,0 +1,14 @@
+{% extends "base.html" %} {% block content %}
+
+<div class="container" style="height: 100vh">
+  <a class="btn btn-light my-3" href="/">Home</a>
+  <div class="col-2 m-auto mb-5"><h1 class="text-info font" style="font-weight: 600;">RESULT</h1></div>
+  <div class="col-6 m-auto ">
+      <hr>
+    <h1 class="m-3 text-muted font2">Total Amount To Pay:  {{grandtotal}}</h1>
+    <hr>
+    <h1 class="m-3 text-muted font2">Total Interest Added: {{interest_rate}}</h1>
+    <hr>
+  </div>
+</div>
+{% endblock content %}
